@@ -1,0 +1,24 @@
+# coding: utf-8
+
+input_line1 = input()
+number = int(input_line1.split()[0])
+clear_point = int(input_line1.split()[1])
+
+result = {}
+x = 0
+
+for i in range(number):
+    x += 1
+    input_line2 = input()
+    point = int(input_line2.split()[0])
+    absence = int(input_line2.split()[1])
+    score = point - absence*5
+    if score <= 0:
+        score = 0
+    result.setdefault(x,score)
+
+for k,v in result.items():
+    if v >= clear_point:
+        print(k)
+    else:
+        pass

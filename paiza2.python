@@ -1,0 +1,21 @@
+# coding: utf-8
+# 自分の得意な言語で
+# Let's チャレンジ！！
+
+number_of_word = int(input())
+important_word = input()
+
+result = []
+
+for i in range(number_of_word):
+    words = input()
+    if important_word in words:
+        result.append(words)
+    else:
+        pass
+
+if not result:
+    print('None')
+else:
+    for word in result:
+        print(word)

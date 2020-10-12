@@ -1,0 +1,33 @@
+# coding: utf-8
+# 自分の得意な言語で
+# Let's チャレンジ！！
+
+import datetime
+from datetime import timedelta
+
+input_line = input()
+walk_from_home = int(input_line.split()[0])
+on_train = int(input_line.split()[1])
+walk_from_sta = int(input_line.split()[2])
+number = int(input())
+
+time = on_train + walk_from_sta
+attendance = datetime.datetime(year=2020,month=9,day=9,hour=8,minute=59)
+ride_time = attendance - timedelta(minutes=time)
+result = []
+
+for i in range(number):
+    train_info = input()
+    hour = int(train_info.split()[0])
+    minute = int(train_info.split()[1])
+    train_time = datetime.datetime(year=2020,month=9,day=9,hour=hour,minute=minute)
+    if train_time > ride_time:
+        pass
+    else:
+        leave_time = train_time - timedelta(minutes=walk_from_home)
+        leave_time_hour = str(leave_time.hour)
+        leave_time_minute = str(leave_time.minute)
+        result.append(leave_time_hour.zfill(2) + ':' + leave_time_minute.zfill(2))
+
+print(max(result))
+    
