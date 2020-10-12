@@ -1,0 +1,30 @@
+# coding: utf-8
+# 自分の得意な言語で
+# Let's チャレンジ！！
+
+input_line = input()
+
+a = input_line.split()[0]
+op = input_line.split()[1]
+b = input_line.split()[2]
+c = input_line.split()[4]
+
+
+if a == 'x' and op == '+':
+    x = int(c) - int(b)
+    print(x)
+elif a == 'x' and op == '-':
+    x = int(b) + int(c)
+    print(x)
+elif b == 'x' and op == '+':
+    x = int(c) - int(a)
+    print(x)
+elif b == 'x' and op == '-':
+    x = int(a) - int(c)
+    print(x)
+elif c == 'x' and op == '+':
+    x = int(a) + int(b)
+    print(x)
+elif c == 'x' and op == '-':
+    x = int(a) - int(b)
+    print(x)
