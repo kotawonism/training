@@ -1,0 +1,18 @@
+# coding: utf-8
+# 自分の得意な言語で
+# Let's チャレンジ！！
+
+import math
+
+input_line = input()
+coffee_price = int(input_line.split()[0])
+discount = int(input_line.split()[1]) / 100
+
+after_price = coffee_price
+total = coffee_price
+
+while after_price > 0:
+    after_price = math.floor(after_price * (1 - discount))
+    total += after_price
+    
+print(total)
