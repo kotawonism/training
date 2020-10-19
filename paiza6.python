@@ -1,0 +1,24 @@
+# coding: utf-8
+# 自分の得意な言語で
+# Let's チャレンジ！！
+import collections
+
+times =int(input())
+
+for i in range(times):
+    list = []
+    row = input()
+    list += [int(row[0]),int(row[1]),int(row[2]),int(row[3])]
+    list_dict = collections.Counter(list)
+    max_appear_times = max(list_dict.values())
+    min_appear_times = min(list_dict.values())
+    if max_appear_times == 4 and min_appear_times == 4:
+        print('Four Card')
+    elif max_appear_times == 3 and min_appear_times == 1:
+        print('Three Card')
+    elif max_appear_times == 2 and min_appear_times == 2:
+        print('Two Pair')
+    elif max_appear_times == 2:
+        print('One Pair')
+    else:
+        print('No Pair')
